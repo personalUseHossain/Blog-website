@@ -1,0 +1,271 @@
+/* Universal CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+a,
+i,
+button,
+img{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* Custom Variables */
+:root{
+    --white: #F2F2F2;
+    --light-white: #f4f6f6;
+    --dark: #333232;
+    --gray: #595959;
+    --hover:#07ab90;
+}
+
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+    height: 7rem;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+.menu-logo{
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+}
+.logo{
+    width: 4rem;
+}
+.navbar-ul{
+    display: flex;
+    gap: 2rem;
+    font-size: 15px;
+    transition: 1s;
+}
+
+.navbar-li a{
+    padding: 10px;
+    color: var(--dark);
+    position: relative;
+    transition: .5s;
+}
+.navbar-li a::before{
+    content: '';
+    position: absolute;
+    background-color: var(--hover);
+    height: 1.9px;
+    width: 0%;
+    top: 2rem;
+    left: 6px;
+    transition: width .5s;
+}
+.navbar-li a:hover:before{
+    width: 90%;
+}
+.navbar-li a:hover{
+    color: var(--hover)
+}
+.user{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+}
+.user img{
+    width: 4rem;
+    border-radius: 50%;
+    background-color: var(--dark);
+
+}
+.fa-solid{
+    font-size: 20px;
+    display: none !important;
+}
+
+@media (width < 1024px) {
+    .menu-logo{
+        gap: 4rem;
+    }
+
+}
+@media (width < 783px) {
+    .logo{
+        width: 3rem;
+    }
+    .navbar-ul{
+        gap: 1rem;
+    }
+    .user img{
+        width: 3rem;
+    }
+}
+@media (width < 687px) {
+
+    .navbar-ul{
+        position: absolute;
+        width: 100vw;
+        height: 95vh;
+        justify-items: start;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        border-radius: 10px;
+        top: 3.1rem;
+        justify-content: flex-start;
+        margin: 2rem 2rem 0 0;
+        align-items: center;
+        background: white;
+        padding: 50px 0;
+    }
+    .navbar-li{
+        margin-left: 10px;
+        padding: 10px 0;
+    }
+    .navbar-li a::before{
+        display: none;
+    }
+    .togglemenu{
+        left: 0;
+    }
+    .navbar .fa-solid{
+        display: block !important;
+    }
+}
+
+
+
+
+
+/* Hero-section */
+.hero-section{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.hero{
+    display: grid;
+    padding: 20px;
+    width: 60vw;
+    grid-column-gap: 11rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.hero .blog{
+    width: 20vw;
+    padding: 10px;
+    background-color: var(--light-white);
+    padding: 30px;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.blog img{
+    width: 15vw;
+    border-radius: 2px;
+}
+.hero .blog > *{
+    margin: .5rem;
+}
+.blog button{
+    padding: 8px;
+    background: var(--gray);
+    color: var(--white);
+    border-radius: 5px;
+    justify-self: end;
+    align-self: end;
+}
+.sidebar{
+    padding: 20px;
+    align-self: start;
+}
+.sidbar > *{
+    margin: .5rem;
+}
+.sidebar h3{
+    font-size: 20px;
+    padding: 5px;
+}
+.sidebar .catalog input{
+    padding: 5px 10px;
+    margin-bottom: 1rem;
+}
+.sidebar .catalog ul li{
+    padding: 10px 0;
+}
+
+
+@media ( width < 1902px) {
+    .blog img{
+        width: 26vw;
+    }
+    .hero .blog{
+        width: 32vw;
+
+    }
+}
+@media ( width < 1326px) {
+    .hero{
+        grid-column-gap: 5rem;
+    }
+    .blog img{
+        width: 20vw;
+    }
+    .hero .blog{
+        width: 30vw;
+        padding: 16px;
+    }
+}
+@media ( width < 1038px) {
+    .hero{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+@media ( width < 779px) {
+    .hero .blog{
+        width: 100%;
+        padding-right: 30px;
+    }
+    .blog img{
+        width: 100%;
+        
+    }
+}
+@media ( width < 564px) {
+    .hero{
+        width: 100vw;
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .sidebar{
+        align-self: center;
+    }
+    .hero .blog{
+        
+    }
+    .blog img{
+    
+        
+    }
+}
+
+
+
