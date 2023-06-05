@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The ultimate blog website || All in one blog in single website
+    </title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .admin-login h1 {
+        color: white;
+        margin-bottom: 2rem;
+      }
+      .admin-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(38, 33, 33);
+        height: 100vh;
+      }
+      .admin-login input {
+        padding: 7px;
+        width: 15rem;
+        background: rgb(57, 47, 47);
+        border: none;
+        margin: 5px;
+      }
+      .admin-login button {
+        padding: 7px 6.9rem;
+        margin-left: 1.1rem;
+        margin-top: 2px;
+        background: rgb(255, 113, 137);
+      }
+      .fa-solid {
+        color: white;
+        font-size: 16px;
+      }
+    </style>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <form action="/admin/login" method="post" class="admin-login">
+      <h1>Admin Login</h1>
+      <label>
+        <i class="fa-solid fa-user"></i>
+        <input name="username" type="text" placeholder="Username" required />
+      </label>
+      <label>
+        <i class="fa-solid fa-lock"></i>
+        <input
+          name="password"
+          type="password"
+          placeholder="passowrd"
+          required
+        />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <script src="./public/js/home.js"></script>
+    <script
+      src="https://kit.fontawesome.com/59ef65778e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<%- include('./navbar.ejs') %>
+<section class="hero-section">
+  <div class="hero">
+    <% blogs.forEach((blog)=>{ %>
+    <div class="blog">
+      <img src="<%= blog.img %>" alt="" />
+      <h1><%= blog.heading %></h1>
+      <p><%= blog.smallblog %></p>
+      <a href="/find/<%= blog._id %>"><button>Read</button></a>
+    </div>
+    <% }) %>
+  </div>
+  <div class="sidebar">
+    <h3>Blog Catagories</h3>
+    <div class="catalog">
+      <input type="text" placeholder="Search Blog..." />
+      <ul>
+        <li>View All</li>
+        <li>Technology</li>
+        <li>Science</li>
+        <li>Current Affairs</li>
+        <li>Book Review</li>
+        <li>Coding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<%- include('./footer.ejs') %>
