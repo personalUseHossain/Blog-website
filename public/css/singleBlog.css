@@ -1,0 +1,27 @@
+.blog-container{
+   padding: 50px;
+   display: grid;
+   place-items: center;
+   margin-top: 0rem;
+
+}
+
+.blog-container img{
+    width: 48rem;
+    margin-bottom: 5rem;
+}
+.blog-txt{
+    justify-self: start;
+}
+.blog-txt > *{
+    margin: 1rem;
+}
+
+@media (width < 1037px) {
+    .blog-container img{
+        width: 95%;
+    }
+    .blog-container{
+        font-size: 15px;
+    }
+}
