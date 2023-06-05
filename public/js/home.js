@@ -1,5 +1,6 @@
 const menu = document.querySelector('.navbar-ul');
 const hamburgerIcon = document.querySelector('.fa-bars-staggered');
+console.log(menu, hamburgerIcon)
 
 
 hamburgerIcon.addEventListener('click', () => {
@@ -15,3 +16,6 @@ function checkhamburger(icon) {
         menu.classList.remove('togglemenu');
     }
 }
+
+
+
