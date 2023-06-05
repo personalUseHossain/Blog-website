@@ -190,9 +190,17 @@ li{
     justify-self: end;
     align-self: end;
 }
+.blog button a{
+    color: white;
+    text-decoration: none;
+}
 .sidebar{
     padding: 20px;
     align-self: start;
+    margin-top: 3rem;
+    position: sticky;
+    top: 7rem;
+    z-index: 100;
 }
 .sidbar > *{
     margin: .5rem;
@@ -257,14 +265,29 @@ li{
     }
     .sidebar{
         align-self: center;
+        margin-top: 0;
     }
-    .hero .blog{
-        
+    .sidebar .catalog input{
+        width: 81vw;
     }
-    .blog img{
-    
-        
+    .sidebar ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(109px, 1fr));
+        gap: 2rem;
+        place-items: center;
+        margin: 2rem 0;
     }
+}
+
+
+/* Footer */
+.footer{
+    height: 5rem;
+    background: var(--gray);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
