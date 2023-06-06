@@ -1,0 +1,44 @@
+body{
+    color: white;
+    background: rgb(47, 41, 41);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 50px 100px 100px 100px;
+}
+.container{
+    display: grid;
+
+}
+h1{
+    color: rgb(158, 165, 238);
+}
+input{
+    background: rgb(73, 69, 69);
+    border: none;
+    padding: 10px;
+    width: 40rem;
+    margin: 1rem;
+    color: white;
+}
+label{
+    display: grid;
+    margin: 20px;
+}
+
+textarea{
+    color: white;
+    background: rgb(73, 69, 69);
+    padding: 30px;
+}
+button{
+    padding: 10px;
+    background: greenyellow;
+    width: 5rem;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
