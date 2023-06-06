@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <section class="hero-section">
+      <div class="hero">
+        <% adminblogs.forEach((blog)=>{ %>
+        <div class="blog">
+          <img src="<%= blog.img %>" alt="" />
+          <h1><%= blog.heading %></h1>
+          <p><%= blog.smallblog %></p>
+          <a href="/admin/edit/<%= blog._id %>"
+            ><button style="color: black; background: greenyellow">
+              Edit
+            </button></a
+          >
+          <a href="/admin/delete/<%= blog._id %>"
+            ><button style="color: black; background: red">Delate</button></a
+          >
+        </div>
+        <% }) %>
+      </div>
+      <div class="sidebar">
+        <h3>Blog Catagories</h3>
+        <div class="catalog">
+          <input type="text" placeholder="Search Blog..." />
+          <ul>
+            <li>View All</li>
+            <li>Technology</li>
+            <li>Science</li>
+            <li>Current Affairs</li>
+            <li>Book Review</li>
+            <li>Coding</li>
+            <li><a href="/">Go Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
