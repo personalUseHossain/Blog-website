@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= findOne.heading %></title>
     <link rel="stylesheet" href="./css/home.css" />
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
   </head>
   <body>
     <nav class="navbar">
       <div class="menu-logo">
-        <img class="logo" src="/img/logo.png" alt="" />
+        <a href="/"><img class="logo" src="/img/logo.png" alt="" /></a>
         <ul class="navbar-ul">
           <li class="navbar-li"><a href="/">Home</a></li>
           <li class="navbar-li"><a href="#">Blogs</a></li>
@@ -21,7 +21,7 @@
       </div>
       <div class="user-nav">
         <div class="user">
-          <img src="/img/nobackgroun.png" alt="" />
+          <img class="user-img" src="./" onerror="errimg()" />
           <i class="fa-solid fa-bars-staggered"></i>
         </div>
       </div>

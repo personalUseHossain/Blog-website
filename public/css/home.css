@@ -48,7 +48,7 @@ li{
     gap: 9rem;
 }
 .logo{
-    width: 4rem;
+    width: 3rem;
 }
 .navbar-ul{
     display: flex;
@@ -86,7 +86,7 @@ li{
     gap: 2rem;
 }
 .user img{
-    width: 4rem;
+    width: 2.5rem;
     border-radius: 50%;
     background-color: var(--dark);
 
@@ -96,21 +96,13 @@ li{
     display: none !important;
 }
 
-@media (width < 1024px) {
-    .menu-logo{
-        gap: 4rem;
-    }
-
-}
 @media (width < 783px) {
-    .logo{
-        width: 3rem;
-    }
     .navbar-ul{
         gap: 1rem;
     }
     .user img{
-        width: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
 @media (width < 687px) {
